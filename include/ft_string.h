@@ -19,7 +19,9 @@ char *ft_strcat(char *restrict dst, const char *restrict src);
 char *ft_strchr(const char *s, int c);
 char *ft_strchrnul(const char *s, int c);
 char *ft_strcpy(char *restrict dst, const char *restrict src);
+size_t ft_strcspn(const char *s, const char *reject);
 char *ft_strdup(const char *s);
+char *ft_strjoin(const char *s1, const char *s2);
 size_t ft_strlcat(char *restrict dst, const char *restrict src, size_t size);
 size_t ft_strlcpy(char *restrict dst, const char *restrict src, size_t size);
 size_t ft_strlen(const char *s);
@@ -29,7 +31,10 @@ char *ft_strncpy(char *restrict dst, const char *restrict src, size_t size);
 size_t ft_strnlen(const char *s, size_t maxlen);
 char *ft_strnstr(const char *big, const char *little, size_t size);
 char *ft_strrchr(const char *s, int c);
+size_t ft_strspn(const char *s, const char *accept);
 char *ft_strstr(const char *big, const char *little);
 char *ft_strsub(const char *s, size_t start, size_t size);
+char *ft_strtok(char *s, const char *delim);
+char *ft_strtok_r(char *s, const char *delim, char **oldptr);
 
 #endif
