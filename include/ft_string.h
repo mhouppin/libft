@@ -13,8 +13,11 @@ void *ft_memmem(const void *big, size_t biglen, const void *little, size_t littl
 void *ft_memmove(void *dst, const void *src, size_t size);
 void *ft_mempcpy(void *restrict dst, const void *restrict src, size_t size);
 void *ft_memset(void *b, int c, size_t size);
+char *ft_stpcpy(char *dst, const char *src);
+char *ft_stpncpy(char *dst, const char *src, size_t size);
 char *ft_strcat(char *restrict dst, const char *restrict src);
 char *ft_strchr(const char *s, int c);
+char *ft_strchrnul(const char *s, int c);
 char *ft_strcpy(char *restrict dst, const char *restrict src);
 char *ft_strdup(const char *s);
 size_t ft_strlcat(char *restrict dst, const char *restrict src, size_t size);
