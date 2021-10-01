@@ -10,7 +10,7 @@ $(NAME): $(OBJECTS)
 	ar -rcs $@ $^
 
 %.o: %.c
-	$(CC) $(CFLAGS) -Wall -Wextra -Werror -O3 -c -MMD -I include -o $@ $<
+	$(CC) $(CFLAGS) -Wall -Wextra -Wvla -Wshadow -Werror -std=gnu11 -O3 -c -MMD -I include -o $@ $<
 
 -include $(DEPENDS)
 
