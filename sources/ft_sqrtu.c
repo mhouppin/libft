@@ -19,5 +19,5 @@ uintmax_t ft_sqrtu(uintmax_t value)
         bit >>= 2;
     }
 
-    return (root);
+    return root;
 }

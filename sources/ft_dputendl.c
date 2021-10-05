@@ -7,7 +7,7 @@ int ft_dputendl(const char *s, int fd)
     ssize_t result = write(fd, s, slen);
 
     if (result < (ssize_t)slen)
-        return (result);
+        return result;
 
     result = ft_dputchar('\n', fd);
 

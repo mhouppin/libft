@@ -8,5 +8,5 @@ void *ft_memccpy(void *restrict dst, const void *restrict src, int c, size_t siz
         if (((const char *)src)[i] == c)
             return (void *)((char *)dst + i + 1);
     }
-    return (NULL);
+    return NULL;
 }
