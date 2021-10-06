@@ -1,6 +1,6 @@
 #include "ft_lklist.h"
 
-void ft_lkpush_back(lklist_t *list, lknode_t *newNode)
+void ft_lkpush_back(List *list, ListNode *newNode)
 {
     if (list->size == 0)
     {

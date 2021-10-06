@@ -1,8 +1,8 @@
 #include "ft_lklist.h"
 
-int ft_lkemplace_front(lklist_t *list, void *data)
+int ft_lkemplace_front(List *list, void *data)
 {
-    lknode_t *node = ft_lknode_create(data);
+    ListNode *node = ft_lknode_create(data);
 
     if (node == NULL)
         return -1;

@@ -1,9 +1,9 @@
 #include "ft_lklist.h"
 
-ptrdiff_t ft_lkdistance(const lknode_t *start, const lknode_t *end)
+ptrdiff_t ft_lkdistance(const ListNode *start, const ListNode *end)
 {
-    const lknode_t *leftIt = start;
-    const lknode_t *rightIt = start;
+    const ListNode *leftIt = start;
+    const ListNode *rightIt = start;
     ptrdiff_t i = 0;
 
     while (leftIt != end && rightIt != end)

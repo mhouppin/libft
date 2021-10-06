@@ -5,46 +5,46 @@
 # include <stddef.h>
 # include <stdint.h>
 
-typedef struct lknode_s
+typedef struct ListNode_
 {
     void *data;
-    struct lknode_s *prev;
-    struct lknode_s *next;
+    struct ListNode_ *prev;
+    struct ListNode_ *next;
 }
-lknode_t;
+ListNode;
 
-typedef struct lklist_s
+typedef struct List_
 {
-    lknode_t *front;
-    lknode_t *back;
+    ListNode *front;
+    ListNode *back;
     size_t size;
 }
-lklist_t;
+List;
 
-void ft_lkdestroy(lklist_t *list, void (*dataDtor)(void *));
-ptrdiff_t ft_lkdistance(const lknode_t *start, const lknode_t *end);
-lklist_t *ft_lkdup(const lklist_t *list, void *(*dataDup)(void *), void (*dataDtor)(void *));
-int ft_lkemplace(lklist_t *list, lknode_t *pos, void *data);
-int ft_lkemplace_back(lklist_t *list, void *data);
-int ft_lkemplace_front(lklist_t *list, void *data);
-void ft_lkerase(lklist_t *list, lknode_t *node, void (*dataDtor)(void *));
-void ft_lkfirst_node(lklist_t *list, lknode_t *node);
-void ft_lkinit(lklist_t *list);
-void ft_lkinsert(lklist_t *list, lknode_t *pos, lknode_t *newNode);
-void ft_lkmerge(lklist_t *list, lklist_t *other, int (*dataComp)(const void *, const void *));
-lknode_t *ft_lknode_create(void *data);
-void ft_lkpop_back(lklist_t *list, void (*dataDtor)(void *));
-void ft_lkpop_front(lklist_t *list, void (*dataDtor)(void *));
-void ft_lkpush_back(lklist_t *list, lknode_t *newNode);
-void ft_lkpush_front(lklist_t *list, lknode_t *newNode);
-size_t ft_lkremove_if(lklist_t *list, bool (*dataRemovePred)(const void *), void (*dataDtor)(void *));
-void ft_lkreverse(lklist_t *list);
-size_t ft_lksize(const lklist_t *list);
-void ft_lksort(lklist_t *list, int (*dataComp)(const void *, const void *));
-void ft_lksplice_all(lklist_t *list, lknode_t *pos, lklist_t *other);
-void ft_lksplice_one(lklist_t *list, lknode_t *pos, lklist_t *other, lknode_t *node);
-void ft_lksplice_range(lklist_t *list, lknode_t *pos, lklist_t *other, lknode_t *first, lknode_t *last);
-void ft_lkswap(lklist_t *list, lklist_t *other);
-size_t ft_lkunique(lklist_t *list, bool (*dataBinaryPred)(const void *, const void *), void (*dataDtor)(void *));
+void ft_lkdestroy(List *list, void (*dataDtor)(void *));
+ptrdiff_t ft_lkdistance(const ListNode *start, const ListNode *end);
+List *ft_lkdup(const List *list, void *(*dataDup)(void *), void (*dataDtor)(void *));
+int ft_lkemplace(List *list, ListNode *pos, void *data);
+int ft_lkemplace_back(List *list, void *data);
+int ft_lkemplace_front(List *list, void *data);
+void ft_lkerase(List *list, ListNode *node, void (*dataDtor)(void *));
+void ft_lkfirst_node(List *list, ListNode *node);
+void ft_lkinit(List *list);
+void ft_lkinsert(List *list, ListNode *pos, ListNode *newNode);
+void ft_lkmerge(List *list, List *other, int (*dataComp)(const void *, const void *));
+ListNode *ft_lknode_create(void *data);
+void ft_lkpop_back(List *list, void (*dataDtor)(void *));
+void ft_lkpop_front(List *list, void (*dataDtor)(void *));
+void ft_lkpush_back(List *list, ListNode *newNode);
+void ft_lkpush_front(List *list, ListNode *newNode);
+size_t ft_lkremove_if(List *list, bool (*dataRemovePred)(const void *), void (*dataDtor)(void *));
+void ft_lkreverse(List *list);
+size_t ft_lksize(const List *list);
+void ft_lksort(List *list, int (*dataComp)(const void *, const void *));
+void ft_lksplice_all(List *list, ListNode *pos, List *other);
+void ft_lksplice_one(List *list, ListNode *pos, List *other, ListNode *node);
+void ft_lksplice_range(List *list, ListNode *pos, List *other, ListNode *first, ListNode *last);
+void ft_lkswap(List *list, List *other);
+size_t ft_lkunique(List *list, bool (*dataBinaryPred)(const void *, const void *), void (*dataDtor)(void *));
 
 #endif

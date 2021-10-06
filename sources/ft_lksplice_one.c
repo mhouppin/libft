@@ -1,6 +1,6 @@
 #include "ft_lklist.h"
 
-void ft_lksplice_one(lklist_t *list, lknode_t *pos, lklist_t *other, lknode_t *node)
+void ft_lksplice_one(List *list, ListNode *pos, List *other, ListNode *node)
 {
     if (node == NULL)
         return ;

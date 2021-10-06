@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include "ft_lklist.h"
 
-void ft_lkerase(lklist_t *list, lknode_t *node, void (*dataDtor)(void *))
+void ft_lkerase(List *list, ListNode *node, void (*dataDtor)(void *))
 {
     if (node == NULL)
         return ;

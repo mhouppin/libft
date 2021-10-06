@@ -1,13 +1,13 @@
 #include "ft_lklist.h"
 
-size_t ft_lkremove_if(lklist_t *list, bool (*dataRemovePred)(const void *), void (*dataDtor)(void *))
+size_t ft_lkremove_if(List *list, bool (*dataRemovePred)(const void *), void (*dataDtor)(void *))
 {
-    lknode_t *node = list->front;
+    ListNode *node = list->front;
     size_t count = 0;
 
     while (node)
     {
-        lknode_t *next = node->next;
+        ListNode *next = node->next;
 
         if (dataRemovePred(node->data))
         {

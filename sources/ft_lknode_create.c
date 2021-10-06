@@ -1,9 +1,9 @@
 #include <stdlib.h>
 #include "ft_lklist.h"
 
-lknode_t *ft_lknode_create(void *data)
+ListNode *ft_lknode_create(void *data)
 {
-    lknode_t *node = malloc(sizeof(lknode_t));
+    ListNode *node = malloc(sizeof(ListNode));
     if (node == NULL)
         return NULL;
 

@@ -1,15 +1,15 @@
 #include "ft_lklist.h"
 
-void ft_lkmerge(lklist_t *list, lklist_t *other, int (*dataComp)(const void *, const void *))
+void ft_lkmerge(List *list, List *other, int (*dataComp)(const void *, const void *))
 {
-    lknode_t *topL = list->front;
-    lknode_t *topO = other->front;
+    ListNode *topL = list->front;
+    ListNode *topO = other->front;
 
     while (topL != NULL && topO != NULL)
     {
         if (dataComp(topO, topL) < 0)
         {
-            lknode_t *next = topO->next;
+            ListNode *next = topO->next;
             ft_lksplice_one(list, topL, other, topO);
             topO = next;
         }

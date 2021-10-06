@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include "ft_lklist.h"
 
-void ft_lkpop_back(lklist_t *list, void (*dataDtor)(void *))
+void ft_lkpop_back(List *list, void (*dataDtor)(void *))
 {
     if (list->size == 0)
         return ;
@@ -16,7 +16,7 @@ void ft_lkpop_back(lklist_t *list, void (*dataDtor)(void *))
         return ;
     }
 
-    lknode_t *newBack = list->back->prev;
+    ListNode *newBack = list->back->prev;
     newBack->next = NULL;
     free(list->back);
     list->back = newBack;

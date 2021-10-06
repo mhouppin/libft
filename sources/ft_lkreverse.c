@@ -1,8 +1,8 @@
 #include "ft_lklist.h"
 
-void ft_lkreverse(lklist_t *list)
+void ft_lkreverse(List *list)
 {
-    lklist_t tmp;
+    List tmp;
 
     ft_lkinit(&tmp);
 

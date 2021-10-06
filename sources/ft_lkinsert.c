@@ -1,6 +1,6 @@
 #include "ft_lklist.h"
 
-void ft_lkinsert(lklist_t *list, lknode_t *pos, lknode_t *newNode)
+void ft_lkinsert(List *list, ListNode *pos, ListNode *newNode)
 {
     if (pos == NULL)
     {
@@ -14,7 +14,7 @@ void ft_lkinsert(lklist_t *list, lknode_t *pos, lknode_t *newNode)
         return ;
     }
 
-    lknode_t *prev = pos->prev;
+    ListNode *prev = pos->prev;
     if (prev != NULL)
         prev->next = newNode;
 

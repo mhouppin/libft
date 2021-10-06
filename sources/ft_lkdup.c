@@ -1,15 +1,15 @@
 #include <stdlib.h>
 #include "ft_lklist.h"
 
-lklist_t *ft_lkdup(const lklist_t *list, void *(*dataDup)(void *), void (*dataDtor)(void *))
+List *ft_lkdup(const List *list, void *(*dataDup)(void *), void (*dataDtor)(void *))
 {
-    lklist_t *newList = malloc(sizeof(lklist_t));
+    List *newList = malloc(sizeof(List));
     if (newList == NULL)
         return NULL;
 
     ft_lkinit(newList);
 
-    for (lknode_t *node = list->front; node != NULL; ++node)
+    for (ListNode *node = list->front; node != NULL; ++node)
     {
         void *newData = dataDup(node->data);
 
@@ -20,7 +20,7 @@ lklist_t *ft_lkdup(const lklist_t *list, void *(*dataDup)(void *), void (*dataDt
             return NULL;
         }
 
-        lknode_t *newNode = ft_lknode_create(newData);
+        ListNode *newNode = ft_lknode_create(newData);
 
         if (newNode == NULL)
         {

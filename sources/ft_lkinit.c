@@ -1,6 +1,6 @@
 #include "ft_lklist.h"
 
-void ft_lkinit(lklist_t *list)
+void ft_lkinit(List *list)
 {
     list->front = NULL;
     list->back = NULL;

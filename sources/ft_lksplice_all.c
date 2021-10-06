@@ -1,6 +1,6 @@
 #include "ft_lklist.h"
 
-void ft_lksplice_all(lklist_t *list, lknode_t *pos, lklist_t *other)
+void ft_lksplice_all(List *list, ListNode *pos, List *other)
 {
     if (list->size == 0)
     {
@@ -24,7 +24,7 @@ void ft_lksplice_all(lklist_t *list, lknode_t *pos, lklist_t *other)
     }
     else
     {
-        lknode_t *prev = pos->prev;
+        ListNode *prev = pos->prev;
 
         pos->prev = other->back;
         other->back->next = pos;

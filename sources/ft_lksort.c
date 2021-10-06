@@ -1,14 +1,14 @@
 #include "ft_lklist.h"
 
-void ft_lksort(lklist_t *list, int (*dataComp)(const void *, const void *))
+void ft_lksort(List *list, int (*dataComp)(const void *, const void *))
 {
     if (list->size < 2)
         return ;
 
-    lklist_t carry;
-    lklist_t bucket[64];
-    lklist_t *fill = bucket;
-    lklist_t *counter;
+    List carry;
+    List bucket[64];
+    List *fill = bucket;
+    List *counter;
 
     do
     {
