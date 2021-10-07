@@ -1,5 +1,5 @@
-#ifndef FT_LKLIST_H
-# define FT_LKLIST_H
+#ifndef FT_LIST_H
+# define FT_LIST_H
 
 # include <stdbool.h>
 # include <stddef.h>

@@ -1,4 +1,4 @@
-#include "ft_lklist.h"
+#include "ft_list.h"
 
 void ft_lkmerge(List *list, List *other, int (*dataComp)(const void *, const void *))
 {

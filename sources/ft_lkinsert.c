@@ -1,4 +1,4 @@
-#include "ft_lklist.h"
+#include "ft_list.h"
 
 void ft_lkinsert(List *list, ListNode *pos, ListNode *newNode)
 {

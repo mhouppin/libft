@@ -36,5 +36,6 @@ char *ft_strstr(const char *big, const char *little);
 char *ft_strsub(const char *s, size_t start, size_t size);
 char *ft_strtok(char *s, const char *delim);
 char *ft_strtok_r(char *s, const char *delim, char **oldptr);
+void ft_swap(void *restrict left, void *restrict right, size_t size);
 
 #endif

@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include "ft_lklist.h"
+#include "ft_list.h"
 
 void ft_lkerase(List *list, ListNode *node, void (*dataDtor)(void *))
 {

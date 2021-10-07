@@ -40,7 +40,7 @@ void ft_vset_item_ctor(Vector *vec, void (*itemCtor)(void *));
 void ft_vset_item_dtor(Vector *vec, void (*itemDtor)(void *));
 int ft_vshrink_to_fit(Vector *vec);
 size_t ft_vsize(const Vector *vec);
-int ft_vsort(Vector *vec, int (*itemComp)(const void *, const void *));
+void ft_vsort(Vector *vec, int (*itemComp)(const void *, const void *));
 void ft_vswap(Vector *vec, Vector *other);
 
 #endif

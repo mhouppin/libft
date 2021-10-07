@@ -1,4 +1,4 @@
-#include "ft_lklist.h"
+#include "ft_list.h"
 
 void ft_lkinit(List *list)
 {

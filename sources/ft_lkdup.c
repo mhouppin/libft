@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include "ft_lklist.h"
+#include "ft_list.h"
 
 List *ft_lkdup(const List *list, void *(*dataDup)(void *), void (*dataDtor)(void *))
 {

@@ -1,4 +1,4 @@
-#include "ft_lklist.h"
+#include "ft_list.h"
 
 void ft_lksplice_one(List *list, ListNode *pos, List *other, ListNode *node)
 {
