@@ -1,4 +1,4 @@
-NAME := libft.so
+NAME := libft.a
 
 SOURCES := $(wildcard sources/*.c)
 OBJECTS := $(SOURCES:%.c=%.o)
@@ -7,10 +7,10 @@ DEPENDS := $(SOURCES:%.c=%.d)
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
-	$(CC) -shared -fPIC -o $@ $^
+	ar -rcs $@ $^
 
 %.o: %.c
-	$(CC) $(CFLAGS) -fPIC -Wall -Wextra -Wvla -Wshadow -Werror -std=gnu11 -O3 -fno-stack-protector -c -MMD -I include -o $@ $<
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c -MMD -I include -o $@ $<
 
 -include $(DEPENDS)
 
