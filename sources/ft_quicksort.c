@@ -1,3 +1,4 @@
+#include <stdint.h>
 #include <stdlib.h>
 #include "ft_stdlib.h"
 #include "ft_string.h"
