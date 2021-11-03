@@ -10,7 +10,8 @@ static void ft_quicksort_r(void *base, size_t start, size_t end, size_t size, in
 
     size_t left = start - 1;
     size_t right = end + 1;
-    void *pivot = (char *)base + (start + end) / 2 * size;
+    size_t pindex = (start + end) / 2;
+    void *pivot = (char *)base + pindex * size;
 
     while (1)
     {
@@ -22,7 +23,7 @@ static void ft_quicksort_r(void *base, size_t start, size_t end, size_t size, in
 
         do
         {
-            ++right;
+            --right;
         }
         while (compar((char *)base + right * size, pivot) > 0);
 
@@ -30,6 +31,17 @@ static void ft_quicksort_r(void *base, size_t start, size_t end, size_t size, in
             break ;
 
         ft_swap((char *)base + left * size, (char *)base + right * size, size);
+
+        if (left == pindex)
+        {
+            pindex = right;
+            pivot = (char *)base + pindex * size;
+        }
+        else if (right == pindex)
+        {
+            pindex = left;
+            pivot = (char *)base + pindex * size;
+        }
     }
 
     ft_quicksort_r(base, start, right, size, compar);
