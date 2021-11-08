@@ -6,7 +6,7 @@ size_t ft_strlcpy(char *restrict dst, const char *restrict src, size_t size)
 
     if (srclen < size)
         ft_memcpy(dst, src, srclen + 1);
-    else
+    else if (size)
     {
         ft_memcpy(dst, src, size - 1);
         dst[size - 1] = '\0';
