@@ -1,5 +1,7 @@
 NAME := libft.a
 
+CFLAGS += -Wall -Wextra -Wvla -Wshadow -Werror -O3
+
 SOURCES := $(wildcard sources/*.c)
 OBJECTS := $(SOURCES:%.c=%.o)
 DEPENDS := $(SOURCES:%.c=%.d)
