@@ -5,9 +5,9 @@ int ft_vasprintf(char **str, const char *fmt, va_list ap)
 {
     ByteArray b;
 
-    if (ft_binit_vformat(&b, fmt, ap) || ft_bpush_back(&b, '\0'))
+    if (barray_init_vformat(&b, fmt, ap) || barray_push_back(&b, '\0'))
     {
-        ft_bdestroy(&b);
+        barray_destroy(&b);
         return -1;
     }
 

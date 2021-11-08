@@ -13,11 +13,11 @@ typedef struct Queue_
 }
 Queue;
 
-void ft_qdestroy(Queue *q);
-void ft_qinit(Queue *q);
-int ft_qread(Queue *q, void **buf, size_t *bufSize);
-void ft_qwait_empty(Queue *q);
-void ft_qwait_filled(Queue *q);
-int ft_qwrite(Queue *q, void *buf, size_t bufSize);
+void queue_destroy(Queue *q);
+void queue_init(Queue *q);
+int queue_read(Queue *q, void **buf, size_t *bufSize);
+void queue_wait_empty(Queue *q);
+void queue_wait_filled(Queue *q);
+int queue_write(Queue *q, void *buf, size_t bufSize);
 
 #endif

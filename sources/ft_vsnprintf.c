@@ -7,7 +7,7 @@ int ft_vsnprintf(char *restrict str, size_t size, const char *restrict fmt, va_l
 {
     ByteArray b;
 
-    if (ft_binit_vformat(&b, fmt, ap))
+    if (barray_init_vformat(&b, fmt, ap))
         return -1;
 
     if (size != 0)
@@ -20,6 +20,6 @@ int ft_vsnprintf(char *restrict str, size_t size, const char *restrict fmt, va_l
 
     int retval = b.size;
 
-    ft_bdestroy(&b);
+    barray_destroy(&b);
     return retval;
 }

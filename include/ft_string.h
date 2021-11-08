@@ -4,7 +4,6 @@
 # include <stddef.h>
 
 void ft_bzero(void *b, size_t size);
-
 void *ft_memchr(const void *b, int c, size_t size);
 int ft_memcmp(const void *s1, const void *s2, size_t size);
 void *ft_memccpy(void *restrict dst, const void *restrict src, int c, size_t size);

@@ -6,7 +6,7 @@ int ft_vsprintf(char *restrict str, const char *restrict fmt, va_list ap)
 {
     ByteArray b;
 
-    if (ft_binit_vformat(&b, fmt, ap))
+    if (barray_init_vformat(&b, fmt, ap))
         return -1;
 
     ft_memcpy(str, b.data, b.size);
@@ -14,6 +14,6 @@ int ft_vsprintf(char *restrict str, const char *restrict fmt, va_list ap)
 
     int retval = b.size;
 
-    ft_bdestroy(&b);
+    barray_destroy(&b);
     return retval;
 }

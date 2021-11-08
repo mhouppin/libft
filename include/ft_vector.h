@@ -16,31 +16,31 @@ typedef struct Vector_
 }
 Vector;
 
-void *ft_vat(const Vector *vec, size_t index);
-int ft_vauto_expand(Vector *vec);
-size_t ft_vcapacity(const Vector *vec);
-void ft_vclear(Vector *vec);
-void ft_vdestroy(Vector *vec);
-void ft_vdup(Vector *dst, const Vector *src);
-void ft_verase(Vector *vec, size_t index);
-void ft_verase_range(Vector *vec, size_t start, size_t end);
-void ft_vinit(Vector *vec, size_t itemSize);
-void ft_vinit_buffer(Vector *vec, size_t itemSize, size_t itemCount, void *initialData);
-int ft_vinit_cbuffer(Vector *vec, size_t itemSize, size_t itemCount, const void *initialData);
-int ft_vinit_fill(Vector *vec, size_t itemSize, size_t itemCount, void (*itemCtor)(void *));
-int ft_vinsert(Vector *vec, size_t index, const void *item);
-int ft_vinsert_range(Vector *vec, size_t index, const void *items, size_t itemCount);
-void ft_vpop_back(Vector *vec);
-void ft_vpop_front(Vector *vec);
-int ft_vpush_back(Vector *vec, const void *item);
-int ft_vpush_front(Vector *vec, const void *item);
-int ft_vresize(Vector *vec, size_t newSize);
-int ft_vreserve(Vector *vec, size_t newCapacity);
-void ft_vset_item_ctor(Vector *vec, void (*itemCtor)(void *));
-void ft_vset_item_dtor(Vector *vec, void (*itemDtor)(void *));
-int ft_vshrink_to_fit(Vector *vec);
-size_t ft_vsize(const Vector *vec);
-void ft_vsort(Vector *vec, int (*itemComp)(const void *, const void *));
-void ft_vswap(Vector *vec, Vector *other);
+void *vector_at(const Vector *vec, size_t index);
+int vector_auto_expand(Vector *vec);
+size_t vector_capacity(const Vector *vec);
+void vector_clear(Vector *vec);
+void vector_destroy(Vector *vec);
+void vector_dup(Vector *dst, const Vector *src);
+void vector_erase(Vector *vec, size_t index);
+void vector_erase_range(Vector *vec, size_t start, size_t end);
+void vector_init(Vector *vec, size_t itemSize);
+void vector_init_buffer(Vector *vec, size_t itemSize, size_t itemCount, void *initialData);
+int vector_init_cbuffer(Vector *vec, size_t itemSize, size_t itemCount, const void *initialData);
+int vector_init_fill(Vector *vec, size_t itemSize, size_t itemCount, void (*itemCtor)(void *));
+int vector_insert(Vector *vec, size_t index, const void *item);
+int vector_insert_range(Vector *vec, size_t index, const void *items, size_t itemCount);
+void vector_pop_back(Vector *vec);
+void vector_pop_front(Vector *vec);
+int vector_push_back(Vector *vec, const void *item);
+int vector_push_front(Vector *vec, const void *item);
+int vector_resize(Vector *vec, size_t newSize);
+int vector_reserve(Vector *vec, size_t newCapacity);
+void vector_set_item_ctor(Vector *vec, void (*itemCtor)(void *));
+void vector_set_item_dtor(Vector *vec, void (*itemDtor)(void *));
+int vector_shrink_to_fit(Vector *vec);
+size_t vector_size(const Vector *vec);
+void vector_sort(Vector *vec, int (*itemComp)(const void *, const void *));
+void vector_swap(Vector *vec, Vector *other);
 
 #endif
