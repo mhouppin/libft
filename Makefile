@@ -11,7 +11,7 @@ all: $(NAME)
 $(NAME): $(OBJECTS)
 	ar -rcs $@ $^
 
-%.o: %.c
+%.o: %.c Makefile
 	$(CC) $(CFLAGS) $(CPPFLAGS) -c -MMD -I include -o $@ $<
 
 -include $(DEPENDS)
