@@ -1,6 +1,6 @@
-#include "ft_queue.h"
+#include "ft_mp_queue.h"
 
-int queue_write(Queue *q, void *buf, size_t bufSize)
+int mp_queue_write(MP_Queue *q, void *buf, size_t bufSize)
 {
     pthread_mutex_lock(&q->mutex);
 

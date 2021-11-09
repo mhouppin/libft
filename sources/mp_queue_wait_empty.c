@@ -1,9 +1,9 @@
-#include "ft_queue.h"
+#include "ft_mp_queue.h"
 
-void queue_wait_filled(Queue *q)
+void mp_queue_wait_empty(MP_Queue *q)
 {
     pthread_mutex_lock(&q->mutex);
-    while (!q->count)
+    while (q->count)
         pthread_cond_wait(&q->cond, &q->mutex);
 
     pthread_mutex_unlock(&q->mutex);

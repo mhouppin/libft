@@ -1,6 +1,6 @@
-#include "ft_queue.h"
+#include "ft_mp_queue.h"
 
-void queue_init(Queue *q)
+void mp_queue_init(MP_Queue *q)
 {
     barray_init(&q->buffer);
     q->count = 0;

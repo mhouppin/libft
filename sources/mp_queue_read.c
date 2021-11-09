@@ -1,8 +1,8 @@
 #include <stdlib.h>
-#include "ft_queue.h"
+#include "ft_mp_queue.h"
 #include "ft_string.h"
 
-int queue_read(Queue *q, void **buf, size_t *bufSize)
+int mp_queue_read(MP_Queue *q, void **buf, size_t *bufSize)
 {
     pthread_mutex_lock(&q->mutex);
 

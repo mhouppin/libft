@@ -1,6 +1,6 @@
-#include "ft_queue.h"
+#include "ft_mp_queue.h"
 
-void queue_destroy(Queue *q)
+void mp_queue_destroy(MP_Queue *q)
 {
     barray_destroy(&q->buffer);
     q->count = 0;
