@@ -1,6 +1,7 @@
 NAME := libft.a
 
-CFLAGS += -Wall -Wextra -Wvla -Wshadow -Werror -O3
+CPPFLAGS += -Wall -Wextra -Wvla -Wshadow -Werror -std=gnu11
+CFLAGS += -O3
 
 SOURCES := $(wildcard sources/*.c)
 OBJECTS := $(SOURCES:%.c=%.o)
@@ -26,6 +27,6 @@ fclean:
 
 re:
 	$(MAKE) fclean
-	+$(MAKE) all
+	+$(MAKE) all CFLAGS="$(CFLAGS)" CPPFLAGS="$(CPPFLAGS)"
 
 .PHONY: all clean fclean re
