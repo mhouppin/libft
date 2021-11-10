@@ -17,6 +17,7 @@ char *ft_stpncpy(char *dst, const char *src, size_t size);
 char *ft_strcat(char *restrict dst, const char *restrict src);
 char *ft_strchr(const char *s, int c);
 char *ft_strchrnul(const char *s, int c);
+int ft_strcmp(const char *s1, const char *s2);
 char *ft_strcpy(char *restrict dst, const char *restrict src);
 size_t ft_strcspn(const char *s, const char *reject);
 char *ft_strdup(const char *s);
