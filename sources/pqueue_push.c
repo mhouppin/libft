@@ -7,6 +7,6 @@ int pqueue_push(PriorQueue *pq, const void *item)
         return -1;
 
     if (pq->cmp != NULL)
-        heap_push(&pq->vec.data, pq->vec.itemSize, pq->vec.itemCount, pq->cmp);
+        heap_push(pq->vec.data, pq->vec.itemSize, pq->vec.itemCount, pq->cmp);
     return 0;
 }
