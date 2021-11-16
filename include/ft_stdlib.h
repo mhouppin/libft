@@ -10,6 +10,7 @@ void *ft_bsearch(const void *key, const void *base, size_t nItems, size_t itemSi
 void *ft_calloc(size_t count, size_t size);
 const char *ft_citoa(int value);
 char *ft_itoa(int value);
+void *ft_lsearch(const void *key, const void *base, size_t nItems, size_t itemSize, int (*compar)(const void *, const void *));
 void ft_quicksort(void *base, size_t nItems, size_t itemSize, int (*compar)(const void *, const void *));
 
 #endif
