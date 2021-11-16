@@ -10,7 +10,7 @@ void heap_adjust(void *first, size_t itemSize, size_t size, int (*cmp)(const voi
     {
         secondChild = 2 * secondChild + 2;
 
-        if (cmp(first + itemSize * secondChild, first + itemSize * (secondChild - 1)) < 0)
+        if (cmp(first + itemSize * secondChild, first + itemSize * (secondChild - 1)) > 0)
             secondChild--;
 
         ft_swap(first + itemSize * index, first + itemSize * secondChild, itemSize);
