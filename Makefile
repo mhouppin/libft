@@ -135,9 +135,12 @@ SOURCES := \
 	sources/stdlib/ft_bsearch.c \
 	sources/stdlib/ft_calloc.c \
 	sources/stdlib/ft_citoa.c \
+	sources/stdlib/ft_insertion_sort.c \
 	sources/stdlib/ft_itoa.c \
 	sources/stdlib/ft_lsearch.c \
+	sources/stdlib/ft_mergesort.c \
 	sources/stdlib/ft_quicksort.c \
+	sources/stdlib/ft_shellsort.c \
 	sources/string/ft_bzero.c \
 	sources/string/ft_memccpy.c \
 	sources/string/ft_memchr.c \
