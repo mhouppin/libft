@@ -91,6 +91,8 @@ SOURCES := \
 	sources/math/ft_maxu.c \
 	sources/math/ft_mini.c \
 	sources/math/ft_minu.c \
+	sources/math/ft_powi.c \
+	sources/math/ft_powu.c \
 	sources/math/ft_sqrt.c \
 	sources/math/ft_sqrtf.c \
 	sources/math/ft_sqrti.c \

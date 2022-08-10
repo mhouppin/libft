@@ -25,6 +25,8 @@ intmax_t ft_maxi(intmax_t left, intmax_t right);
 uintmax_t ft_maxu(uintmax_t left, uintmax_t right);
 intmax_t ft_mini(intmax_t left, intmax_t right);
 uintmax_t ft_minu(uintmax_t left, uintmax_t right);
+intmax_t ft_powi(intmax_t factor, uintmax_t exponent);
+uintmax_t ft_powu(uintmax_t factor, uintmax_t exponent);
 double ft_sqrt(double value);
 float ft_sqrtf(float value);
 intmax_t ft_sqrti(intmax_t value);
