@@ -114,6 +114,7 @@ SOURCES := \
 	sources/prior_queue/pqueue_size.c \
 	sources/prior_queue/pqueue_swap.c \
 	sources/stdio/ft_asprintf.c \
+	sources/stdio/ft_dgetline.c \
 	sources/stdio/ft_dprintf.c \
 	sources/stdio/ft_dputchar.c \
 	sources/stdio/ft_dputendl.c \

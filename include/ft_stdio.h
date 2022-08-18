@@ -5,6 +5,7 @@
 # include <unistd.h>
 
 int ft_asprintf(char **str, const char *fmt, ...);
+ssize_t ft_dgetline(int fd, char **line);
 int ft_dprintf(int fd, const char *restrict fmt, ...);
 int ft_dputchar(char c, int fd);
 int ft_dputendl(const char *s, int fd);
