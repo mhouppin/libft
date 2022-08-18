@@ -57,7 +57,7 @@ ssize_t ft_dgetline(int fd, char **line)
 	if (*line == NULL)
 		return getline_alloc_fail(&buffer, &size);
 
-	ft_memcpy(*line, buffer, size);
+	ft_memcpy(*line, buffer, lineSize);
 	(*line)[lineSize] = '\0';
 	size -= lineSize;
 	ft_memmove(buffer, buffer + lineSize, size);
