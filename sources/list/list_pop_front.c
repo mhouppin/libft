@@ -17,7 +17,7 @@ void list_pop_front(List *list, void (*dataDtor)(void *))
     }
 
     ListNode *newFront = list->front->next;
-    newFront->next = NULL;
+    newFront->prev = NULL;
     free(list->front);
     list->front = newFront;
     --list->size;
