@@ -310,9 +310,10 @@ static const char *print_conv(ByteArray *b, const char *fmt, va_list ap)
             pf.width = pf.width * 10 + *fmt - '0';
 
     // Get the conversion precision
-    if (*fmt == '-')
+    if (*fmt == '.')
     {
         pf.flags |= PF_Precision;
+        ++fmt;
         if (*fmt == '*')
         {
             ++fmt;
