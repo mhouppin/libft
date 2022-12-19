@@ -25,7 +25,7 @@ char *ft_strjoin(const char *s1, const char *s2);
 size_t ft_strlcat(char *restrict dst, const char *restrict src, size_t size);
 size_t ft_strlcpy(char *restrict dst, const char *restrict src, size_t size);
 size_t ft_strlen(const char *s);
-char *ft_strncat(char *restrict dst, const char *restrict src, size_t size)
+char *ft_strncat(char *restrict dst, const char *restrict src, size_t size);
 int ft_strncmp(const char *s1, const char *s2, size_t size);
 char *ft_strncpy(char *restrict dst, const char *restrict src, size_t size);
 char *ft_strndup(const char *s, size_t size);
