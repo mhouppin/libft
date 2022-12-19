@@ -17,8 +17,8 @@ ssize_t ft_dgetline(int fd, char **line)
     ssize_t readSize;
     char readBuf[1024];
 
-    if (read(fd, NULL, 0) == -1)
-        return -1;
+    if (fd < 0 || read(fd, NULL, 0) < 0)
+        return getline_alloc_fail(&buffer, &size);
 
     char *tmp = ft_memchr(buffer, '\n', size);
 
